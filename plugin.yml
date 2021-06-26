@@ -1,4 +1,4 @@
-name: GUIShop
+name: GUIShopEmpyrean
 main: com.pablo67340.guishop.Main
 version: ${project.version}
 author: pablo67340
