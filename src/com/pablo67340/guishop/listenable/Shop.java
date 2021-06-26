@@ -160,7 +160,7 @@ public class Shop {
                 this.GUI = new Gui(Main.getINSTANCE(), 6,
                         ChatColor.translateAlternateColorCodes('&', ConfigUtil.getShopTitle().replace("{shopname}", title)));
             } else {
-                int rows = (int) Math.ceil((double) shopItem.getPages().get("Page0").getItems().size() / 9);
+                int rows = (int) Math.ceil((double) shopItem.getPages().get("Page0").getItems().keySet().stream().mapToInt(Integer::parseInt).max().orElse(0) / 9);
                 if (rows == 0) {
                     rows = 1;
                 }
